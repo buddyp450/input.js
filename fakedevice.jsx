@@ -17,12 +17,6 @@ export default class Connect extends React.Component {
   }
 }
 
-
-
-
-
-  document.body.appendChild(container);
-
   document.getElementById("start").style.display = "none";
 
 

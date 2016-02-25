@@ -1,8 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <script type="text/javascript" src="json2.js"></script>
-    <script type="text/javascript">
+var json2 =  require('json2');
+
       var output = {};
       var gamepad;
       var keymap;
@@ -16,7 +13,7 @@
         }
         return 'Unknown';
       }
-      
+
       function buildDropdown() {
         var controls = [
           '---',
@@ -77,7 +74,7 @@
         var header = document.createElement("h2");
         header.appendChild(document.createTextNode("Program Gamepad"));
         controlList.appendChild(header);
-        
+
         header = document.createElement("h3");
         header.appendChild(document.createTextNode("Axes"));
         controlList.appendChild(header);
@@ -117,10 +114,10 @@
           container.appendChild(dropdown);
           controlList.appendChild(container);
         }
-        
+
         window.mozRequestAnimationFrame(updateStatus);
       }
-      
+
       function updateStatus(e) {
         var iter = Object.keys(gamepad.axes);
         for (var i in iter) {
@@ -134,19 +131,23 @@
 
         window.mozRequestAnimationFrame(updateStatus);
       }
-      
+
       function generateJSON() {
         document.getElementById('text-output').innerHTML = JSON.stringify(output);
       }
-      
+
       window.addEventListener("MozGamepadConnected", connectHandler);
-    </script>
-  </head>
-  <body>
+
+
+
+
+
+<!-- GUI
+
     <h2 id="start">Press a button on your controller to start</h2>
     <div id="control-list"></div>
     <h2>JSON output</h2>
     <textarea id="text-output"></textarea>
     <input type="button" onClick="generateJSON();" value="Generate JSON">
-  </body>
-</html>
+
+-->
