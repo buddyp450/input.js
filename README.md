@@ -1,3 +1,8 @@
+Attempting to node-ify this project
+========
+TODO: TESTSSSSS
+
+
 Input.js
 ========
 Input.js is a JavaScript library to map controller and OS-specific USB enumerations provided by the [Gamepad API](https://wiki.mozilla.org/JoystickAPI) in [Mozilla Firefox](http://www.mozilla.org/firefox/) to an ideal virtual gamepad. While developed for use in [Paladin](https://wiki.mozilla.org/Paladin), Mozilla's open source 3D gaming initiative, Input.js is designed to be used by any web application.
